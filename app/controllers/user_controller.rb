@@ -19,11 +19,6 @@ class UserController < ApplicationController
     def destroy
         @user = User.find(params[:id])
         
-        if @user.nil?
-            render json: { error: "User not found" }, status: :not_found
-            return
-        end
-        
         @user.destroy
         
         head :no_content
