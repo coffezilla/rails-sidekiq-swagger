@@ -85,7 +85,7 @@ GEM
       racc
     builder (3.3.0)
     concurrent-ruby (1.3.6)
-    connection_pool (3.0.2)
+    connection_pool (2.5.5)
     crass (1.0.6)
     date (3.5.1)
     debug (1.11.1)
@@ -239,6 +239,8 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redis-client (0.28.0)
+      connection_pool
     regexp_parser (2.12.0)
     reline (0.6.3)
       io-console (~> 0.5)
@@ -272,6 +274,12 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
+    sidekiq (7.3.9)
+      base64
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
     solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -332,12 +340,14 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  connection_pool (~> 2.4)
   debug
   kamal
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 8.0.2)
   rubocop-rails-omakase
+  sidekiq (~> 7.0)
   solid_cable
   solid_cache
   solid_queue
