@@ -75,4 +75,14 @@ POST http://localhost:3000/users
 Uma vez salvo com sucesso, a tabela post será preenchida com o novo post do usuário "welcome".
 
 
+## Consumir Swagger
+O projeto utiliza o Swagger UI com rswag + openAPI + Swagger. Ao executar o projeto, a rota /api-docs ficará disponível para o consumo.
+
+### Alterando documentação
+`http://localhost:3000/api-docs`
+
+Para alterar e criar uma documentação, basta alterar/criar um documento dentro de spec/integration/<domain>_spec.rb
+
+- Altere o arquivo com dados necessário
+- Gere uma nova versão do doc `RAILS_ENV=test bundle exec rake rswag:specs:swaggerize`
 

@@ -33,8 +33,8 @@ RSpec.describe 'Users API', type: :request do
           user: {
             type: :object,
             properties: {
-              name: { type: :string },
-              email: { type: :string }
+              name: { type: :string, example: 'Renato', description: 'The name of the user' },
+              email: { type: :string, example: 'renato@example.com', description: 'The email of the user' }
             },
             required: %w[name email]
           }
@@ -47,9 +47,9 @@ RSpec.describe 'Users API', type: :request do
 
         schema type: :object,
                properties: {
-                 id: { type: :integer },
-                 name: { type: :string },
-                 email: { type: :string }
+                 id: { type: :integer, example: 1, description: 'The ID of the user' },
+                 name: { type: :string, example: 'Renato', description: 'The name of the user' },
+                 email: { type: :string, example: 'renato@example.com', description: 'The email of the user' }
                },
                required: %w[id name email]
 

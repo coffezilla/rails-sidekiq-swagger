@@ -44,10 +44,16 @@ paths:
                 properties:
                   id:
                     type: integer
+                    example: 1
+                    description: The ID of the user
                   name:
                     type: string
+                    example: Renato
+                    description: The name of the user
                   email:
                     type: string
+                    example: renato@example.com
+                    description: The email of the user
                 required:
                 - id
                 - name
@@ -63,8 +69,12 @@ paths:
                   properties:
                     name:
                       type: string
+                      example: Renato
+                      description: The name of the user
                     email:
                       type: string
+                      example: renato@example.com
+                      description: The email of the user
                   required:
                   - name
                   - email
