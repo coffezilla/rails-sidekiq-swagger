@@ -30,20 +30,14 @@ RSpec.describe 'Users API', type: :request do
       parameter name: :user, in: :body, schema: {
         type: :object,
         properties: {
-          user: {
-            type: :object,
-            properties: {
-              name: { type: :string, example: 'Renato', description: 'The name of the user' },
-              email: { type: :string, example: 'renato@example.com', description: 'The email of the user' }
-            },
-            required: %w[name email]
-          }
+          name: { type: :string, example: 'Renato', description: 'The name of the user' },
+          email: { type: :string, example: 'renato@example.com', description: 'The email of the user' }
         },
-        required: ['user']
+        required: %w[email]
       }
 
       response '201', 'user created' do
-        let(:user) { { user: { name: 'Renato', email: "renato_#{Time.now.to_i}@mail.com" } } }
+        let(:user) { { name: 'Renato', email: "renato_#{Time.now.to_i}@mail.com" } }
 
         schema type: :object,
                properties: {
