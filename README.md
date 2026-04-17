@@ -51,6 +51,16 @@ volumes:
   redis_data:
 ````
 
+### execute os servidores
+Para executar o rails basta usar o comando padrão:
+`rails s`
+
+Para executar o processo sidekiq:
+`bundle exec sidekiq`
+
+Para executar o servidor Redis:
+Basta inicializar o container
+
 ## Como testar?
 Utilizando o Insomnia é possível salvar um novo usuário:
 
