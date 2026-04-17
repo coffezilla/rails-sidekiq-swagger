@@ -86,3 +86,7 @@ Para alterar e criar uma documentação, basta alterar/criar um documento dentro
 - Altere o arquivo com dados necessário
 - Gere uma nova versão do doc `RAILS_ENV=test bundle exec rake rswag:specs:swaggerize`
 
+
+## Rodar testes
+Esta aplicação possui por padrão o RSpec para testes diversos.
+Para executá-los, execute o comando `bundle exec rspec`
