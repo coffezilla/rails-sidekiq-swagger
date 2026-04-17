@@ -6,7 +6,10 @@ class UserController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)
+        @user = User.new(
+            name: set_name,
+            email: params[:email]
+        )
 
         if @user.save
             render json: @user, status: :created
@@ -26,8 +29,6 @@ class UserController < ApplicationController
 
     private
 
-    def user_params
-        params.require(:user).permit(:name, :email)
-    end
+
 
 end
