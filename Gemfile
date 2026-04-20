@@ -20,7 +20,7 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
-gem "sidekiq", "~> 7.0"
+gem "sidekiq", "~> 8.0"
 gem "connection_pool", "~> 2.4"
 
 # Reduces boot times through caching; required in config/boot.rb
